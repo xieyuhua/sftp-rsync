@@ -5,8 +5,8 @@
 ```
 ssh-keygen
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.1.96  -p 7994
-rsync -torpvg --exclude='temp/' --exclude='Runtime/' -avz /www/wwwroot/  -e 'ssh -p 7994' root@192.168.1.96:/www/wwwroot/
-rsync -torpvg --ignore-existing --exclude='.txt' --exclude='Runtime/'  /www/wwwroot/ -e 'ssh -p 7994' root@192.168.1.96:/www/wwwroot/
+rsync -torpvg --exclude='temp/' --exclude='Runtime/' /www/wwwroot/  -e 'ssh -p 7994' root@192.168.1.96:/www/wwwroot/
+rsync -torpvg --ignore-existing --exclude='.txt' --exclude='temp/' /wwwroot/ -e 'ssh -p 7994' root@192.168.1.96:/wwwroot/
 ```
 ![3da631ecef565d7c76ae724db8d0e6e](https://github.com/xieyuhua/sftp-rsync/assets/29120060/6e542cdc-a170-43e8-8653-b5f9d1a353a2)
 
