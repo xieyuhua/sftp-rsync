@@ -2,6 +2,15 @@
 ## 项目简介
 本项目是基于golang标准库 ssh 和 sftp 开发
 
+```
+ssh-keygen
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.1.96  -p 7994
+rsync -torpvg --exclude='temp/' --exclude='Runtime/' -avz /www/wwwroot/  -e 'ssh -p 7994' root@192.168.1.96:/www/wwwroot/
+rsync -torpvg --ignore-existing --exclude='.txt' --exclude='Runtime/'  /www/wwwroot/ -e 'ssh -p 7994' root@192.168.1.96:/www/wwwroot/
+```
+![3da631ecef565d7c76ae724db8d0e6e](https://github.com/xieyuhua/sftp-rsync/assets/29120060/6e542cdc-a170-43e8-8653-b5f9d1a353a2)
+
+
 本项目是对标准库进行一个简单的高层封装,使得可以在在 Windows Linux Mac 上非常容易的执行 ssh 命令,
 以及文件,文件夹的上传,下载等操作.
 1. 当src 为目录时
