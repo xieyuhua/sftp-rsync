@@ -1,6 +1,6 @@
 
 ## 项目简介
-本项目是基于golang标准库 ssh 和 sftp 开发
+本项目是基于golang标准库 ssh 和 sftp 开发，免密实现增量同步
 
 ```
 ssh-keygen
